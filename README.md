@@ -11,11 +11,11 @@
 
 מרכז הבקרה (Dashboard)
 
-![Dashboard](images/admin.PNG)
+![Dashboard](images/admin.png)
 
 ממשק עובדי השטח
 
-![Dashboard](images/worker.PNG)
+![Worker View](images/worker.png)
 
 🛠️ טכנולוגיות מרכזיות
 
