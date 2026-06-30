@@ -1,0 +1,218 @@
+:root {
+    --primary-blue: #00d2ff;
+    --dark-blue: #0099cc;
+    --text-main: #1a202c;
+    --text-muted: #64748b;
+    --border-light: #e2e8f0;
+}
+
+.admin-page-bg {
+    background-color: #ffffff;
+    min-height: 100vh;
+    direction: rtl;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Header & Nav */
+.admin-top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-logo-fixed {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.nav-divider {
+    width: 1px;
+    height: 32px;
+    background: #cbd5e1;
+    margin: 0 20px;
+}
+
+.nav-context-title {
+    font-weight: 500 !important;
+    color: #475569;
+    font-size: 18px !important;
+    white-space: nowrap;
+}
+
+.back-link {
+    color: var(--text-muted) !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+}
+
+/* Main Content */
+.admin-main-content {
+    margin-top: 50px !important;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.page-title-elegant {
+    font-weight: 300 !important;
+    color: var(--text-main);
+    margin-bottom: 8px !important;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* Action Button */
+.action-btn-styled {
+    background: linear-gradient(135deg, #00d2ff 0%, #00a8cc 100%) !important;
+    border-radius: 10px !important;
+    padding: 12px 26px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.action-btn-styled:hover {
+    background: linear-gradient(135deg, #0099cc 0%, #007799 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 210, 255, 0.25) !important;
+}
+
+/* Table Card */
+.data-paper-clean {
+    border-radius: 16px !important;
+    border: 1px solid var(--border-light) !important;
+    background: #ffffff;
+    /* מגביל את גובה הטבלה שלא תברח מתחת למסך ותייצר גלילה בעמוד כולו */
+    max-height: calc(100vh - 240px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-table-container {
+    overflow-y: auto !important;
+    max-height: 100%;
+}
+
+.custom-table-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-table-container::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.custom-table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 8px;
+}
+
+.custom-table-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.th-cell {
+    background-color: #f8fafc !important;
+    color: var(--text-muted) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    padding: 20px !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-light) !important;
+    text-align: center !important;
+}
+
+.tr-body:hover {
+    background-color: #f1f5f9 !important;
+}
+
+.td-name, .td-username, .MuiTableCell-root {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.td-name {
+    font-weight: 600 !important;
+    color: var(--text-main);
+}
+
+/* Pills עבור סטטוס הצי */
+.status-pill-fixed {
+    display: inline-block;
+    width: 95px;
+    padding: 6px 0;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.status-available { 
+    background: #ddf9f9; /* טורקיז בהיר מאוד */
+    color: #015f5e;      /* טורקיז עמוק וכהה */
+}
+.status-in_use { 
+    background: #e0f2fe; /* כחול בהיר מאוד */
+    color: #0369a1;      /* כחול כהה (הצבע המקורי שלך) */
+}
+.status-charging { 
+    background: #f3e8ff; /* סגול בהיר מאוד */
+    color: #6b21a8;      /* סגול חציל כהה */
+}
+.status-in_repair { 
+    background: #f1f5f9; /* אפור בהיר מאוד */
+    color: #475569;      /* אפור גרפיט כהה וקריא */
+}
+
+/* Icons */
+.icon-edit:hover { color: var(--primary-blue) !important; }
+.icon-delete:hover { color: #dc2626 !important; }
+
+/* Dialog */
+.professional-dialog .MuiPaper-root {
+    border-radius: 20px !important;
+    padding: 15px;
+}
+
+.dialog-header {
+    font-weight: 700 !important;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.btn-save {
+    background: var(--primary-blue) !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+}
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

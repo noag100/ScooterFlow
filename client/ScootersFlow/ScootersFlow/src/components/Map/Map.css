@@ -1,0 +1,19 @@
+/* הדיב שמחזיק את מפת Leaflet — ממלא את כל ה-Paper שעוטף אותו */
+.leaflet-map-fill {
+    height: calc(100vh - 118px);
+    width: 100%;
+    min-height: 400px;
+    display: block;
+}
+
+/* פופאפ — מעל שאר האלמנטים */
+.leaflet-popup {
+    z-index: 10000 !important;
+}
+
+/* .leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    padding: 8px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid #eee !important;
+} */

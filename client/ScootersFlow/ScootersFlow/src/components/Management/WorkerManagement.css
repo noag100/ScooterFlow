@@ -1,0 +1,237 @@
+/* WorkerManagement.css - Professional Clean Design */
+
+:root {
+    --primary-blue: #00d2ff;
+    --dark-blue: #0099cc;
+    --text-main: #1a202c;
+    --text-muted: #64748b;
+    --border-light: #e2e8f0;
+}
+
+.admin-page-bg {
+    background-color: #ffffff;
+    min-height: 100vh;
+    direction: rtl;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Header & Nav */
+.admin-top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ממרכז את כל הילדים אנכית */
+    padding: 0 40px;     /* מעבר ל-Padding אופקי בלבד */
+    height: 70px;        /* גובה קבוע לכל ה-Header */
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center; /* מבטיח שהלוגו, הקו והטקסט באותו קו גובה */
+    height: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-logo-fixed {
+    height: 80px;       /* גובה מאוזן יותר שלא "מפוצץ" את ה-Header */
+    width: auto;
+    display: block;
+}
+
+.nav-divider {
+    width: 1px;
+    height: 32px;       /* קו מפריד ברור יותר */
+    background: #cbd5e1;
+    margin: 0 20px;
+}
+
+.nav-context-title {
+    font-weight: 500 !important;
+    color: #475569;
+    font-size: 18px !important;
+    white-space: nowrap; /* מונע שבירת שורה */
+}
+
+.back-link {
+    color: var(--text-muted) !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+}
+
+/* Main Content */
+.admin-main-content {
+    margin-top: 50px !important;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.page-title-elegant {
+    font-weight: 300 !important;
+    color: var(--text-main);
+    margin-bottom: 8px !important;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* Action Button with Gradient Hover */
+.action-btn-styled {
+    background: linear-gradient(135deg, #00d2ff 0%, #00a8cc 100%) !important;
+    border-radius: 10px !important;
+    padding: 12px 26px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.action-btn-styled:hover {
+    background: linear-gradient(135deg, #0099cc 0%, #007799 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 210, 255, 0.25) !important;
+}
+
+/* Table Card - Clean White */
+.data-paper-clean {
+    border-radius: 16px !important;
+    border: 1px solid var(--border-light) !important;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* הגדרת חלוקה שווה לעמודות בטבלה */
+.custom-table-container table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.th-cell {
+    background-color: #f8fafc !important;
+    color: var(--text-muted) !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    padding: 20px !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-light) !important;
+    text-align: center !important; /* מירכוז כותרות */
+}
+
+.tr-body:hover {
+    background-color: #f1f5f9 !important;
+}
+
+/* מירכוז נתונים בתוך התאים */
+.td-name, .td-username, .MuiTableCell-root {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.td-name {
+    font-weight: 600 !important;
+    color: var(--text-main);
+}
+
+/* Fixed-size Pills for Roles */
+.status-pill-fixed {
+    display: inline-block;
+    width: 90px; /* גודל קבוע לכל האליפסות */
+    padding: 6px 0;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* מנהל - גווני כחול */
+.role-logistics { 
+    background: #e0f2fe; /* כחול בהיר מאוד */
+    color: #0369a1;      /* כחול כהה (הצבע המקורי שלך) */
+}
+
+/* טכנאי - גווני אפור */
+.role-technician { 
+    background: #f1f5f9; /* אפור בהיר מאוד */
+    color: #475569;      /* אפור גרפיט כהה וקריא */
+}
+
+/* מטעין - גווני סגול */
+.role-charger { 
+    background: #f3e8ff; /* סגול בהיר מאוד */
+    color: #6b21a8;      /* סגול חציל כהה */
+}
+
+/* לוגיסטיקה - גווני טורקיז/אקווה */
+.role-admin { 
+    background: #ddf9f9; /* טורקיז בהיר מאוד */
+    color: #015f5e;      /* טורקיז עמוק וכהה */
+}
+
+/* הגדרת בסיס לאייקונים - הוספת הטרנזיקציה כאן */
+.icon-edit, .icon-delete {
+    color: #808080; /* האפור הנוכחי */
+    transition: color 0.3s ease, transform 0.2s ease; /* טרנזיקציה חלקה לצבע ולגודל */
+}
+
+/* Icons Hover - הכהות חלקה */
+.icon-edit:hover { 
+    color: #404040 !important; /* אפור כהה מאוד */
+    transform: scale(1.05); /* הגדלה קלילה ואלגנטית */
+}
+
+.icon-delete:hover { 
+    color: #404040 !important; /* אפור כהה מאוד */
+    transform: scale(1.05); /* הגדלה קלילה ואלגנטית */
+}
+
+/* Dialog */
+.professional-dialog .MuiPaper-root {
+    border-radius: 20px !important;
+    padding: 15px;
+}
+
+.dialog-header {
+    font-weight: 700 !important;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.btn-save {
+    background: linear-gradient(135deg, #00d2ff 0%, #00a8cc 100%) !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    margin-right: 10px;
+}
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* --- תוספת בלעדית: עיצוב דיאלוג אישור המחיקה המקצועי --- */
+.btn-delete-confirm {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    margin-right: 10px;
+    color: #ffffff !important;
+}
+
+.dialog-text-center {
+    text-align: center !important;
+    color: var(--text-muted);
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}

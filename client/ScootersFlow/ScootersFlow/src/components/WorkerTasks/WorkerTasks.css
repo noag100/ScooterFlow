@@ -1,0 +1,379 @@
+/* =========================================
+   WorkerTasks.css — מוגן מפני זליגה לדפים אחרים
+   ========================================= */
+
+/* ── Layout wrapper ── */
+.worker-tasks-page.dashboard-wrapper {
+    overflow: hidden;
+    height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Top nav ── */
+.worker-tasks-page .admin-top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 64px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    direction: rtl;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.worker-tasks-page .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.worker-tasks-page .nav-left-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.worker-tasks-page .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.worker-tasks-page .admin-logo-fixed {
+    height: 30px;
+    object-fit: contain;
+}
+
+.worker-tasks-page .nav-divider {
+    width: 1px;
+    height: 22px;
+    background-color: #cbd5e1;
+    margin: 0 4px;
+}
+
+.worker-tasks-page .nav-context-title {
+    font-weight: 600 !important;
+    color: #334155;
+    font-size: 14px !important;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+.worker-tasks-page .user-welcome {
+    font-size: 13px !important;
+    color: #334155;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+.worker-tasks-page .logout-btn-minimal {
+    color: #d63031 !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    text-transform: none !important;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+/* ── Main content area ── */
+.worker-tasks-page .dashboard-content-fluid {
+    flex: 1;
+    padding: 20px 24px !important;
+    overflow: hidden;
+    height: calc(100vh - 64px);
+    box-sizing: border-box;
+}
+
+/* ── Two-column grid ── */
+.worker-tasks-page .dashboard-main-grid {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    flex-wrap: nowrap !important;
+    height: 100% !important;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* עמודת מפה */
+.worker-tasks-page .map-grid-col {
+    flex: 0 0 calc(50% - 10px) !important;
+    max-width: calc(50% - 10px) !important;
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column;
+    padding: 0 !important;
+}
+
+.worker-tasks-page .map-paper-frame {
+    flex: 1;
+    background: transparent !important;
+    height: 100%;
+}
+
+/* עמודת משימות */
+.worker-tasks-page .scrollable-stats-side {
+    flex: 0 0 calc(50% - 10px) !important;
+    max-width: calc(50% - 10px) !important;
+    min-width: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: rtl;
+    padding: 0 !important;
+    scrollbar-width: thin;
+    scrollbar-color: #e2e8f0 transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.worker-tasks-page .scrollable-stats-side::-webkit-scrollbar {
+    width: 4px;
+}
+.worker-tasks-page .scrollable-stats-side::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+/* ── Section header ── */
+.worker-tasks-page .dashboard-section-title {
+    text-align: right;
+    margin-bottom: 12px !important;
+}
+
+.worker-tasks-page .page-title-elegant {
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    color: #0f172a;
+    line-height: 1.3 !important;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+.worker-tasks-page .page-subtitle {
+    font-size: 12px !important;
+    color: #64748b;
+    margin-top: 2px !important;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+/* ── קונטיינר גלילה למשימות ── */
+.worker-tasks-page .tasks-scroll-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* כרטיסיית משימה אחידה בכחול-תכלת */
+.worker-tasks-page .task-card-clean {
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    border-right: 4px solid #4facfe;
+}
+
+.worker-tasks-page .task-card-clean:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* מצב כרטיס נבחר */
+.worker-tasks-page .task-card-clean.task-card-focused {
+    background-color: #f0fdff; 
+    border-color: #00d2ff;
+    box-shadow: 0px 4px 12px rgba(0, 210, 255, 0.1);
+}
+
+.worker-tasks-page .task-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+.worker-tasks-page .task-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.worker-tasks-page .task-scooter-id {
+    margin: 0;
+    font-size: 13px;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* עיצוב הכתובת החדשה */
+.worker-tasks-page .task-scooter-address {
+    margin: 0;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.worker-tasks-page .task-type-pill {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4facfe;
+}
+
+/* כפתור סיום משימה */
+.worker-tasks-page .worker-complete-btn {
+    background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* אפקט מעבר עכבר (Hover) */
+.worker-tasks-page .worker-complete-btn:hover {
+    background: linear-gradient(135deg, #00bdfe 0%, #4FACFE 100%);
+    box-shadow: 0 6px 16px rgba(79, 172, 254, 0.4);
+    transform: translateY(-1px);
+}
+
+/* אפקט בזמן לחיצה (Active) */
+.worker-tasks-page .worker-complete-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(79, 172, 254, 0.2);
+}
+
+/* מסך טעינה */
+.worker-loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8fafc;
+}
+
+.worker-tasks-page .no-tasks-state {
+    padding: 20px 0;
+    text-align: right;
+}
+
+.worker-tasks-page .no-tasks-text {
+    color: #64748b;
+    margin: 0;
+    font-size: 13px;
+}
+
+/* ===================================================
+   ── מודל בהיר ונקי עם V ירוק וכפתור מעוצב ──
+   =================================================== */
+
+.worker-tasks-page .success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* עמעום רקע עדין */
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* כרטיסיית המודל - לבן נקי */
+.worker-tasks-page .dark-order-modal {
+    background: white !important; 
+    padding: 35px 40px !important;
+    border-radius: 24px !important; /* קימור 24px */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* צל עדין שמתאים לרקע בהיר */
+    text-align: center;
+    max-width: 360px;
+    width: 90%;
+    direction: rtl;
+    font-family: 'Assistant', sans-serif !important;
+    animation: scaleUp 0.25s ease-out forwards;
+}
+
+/* אלמנט העיגול וה-V הירוק */
+.worker-tasks-page .success-checkmark-wrapper {
+    width: 72px;
+    height: 72px;
+    background: rgba(34, 197, 94, 0.1); /* ירוק שקוף עדין */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    border: 2px solid #22c55e;
+}
+
+.worker-tasks-page .success-checkmark {
+    color: #22c55e;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+    animation: bounceIn 0.4s ease-out 0.1s both;
+}
+
+/* טקסטים במודל - תוקן לכהה! */
+.worker-tasks-page .dark-modal-title {
+    margin: 0 0 8px 0;
+    color: #1a252f !important; /* צבע כהה וברור */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.worker-tasks-page .dark-modal-text {
+    margin: 0 0 24px 0;
+    color: #4a5568 !important; /* אפור-כהה קריא מאוד על רקע לבן */
+    font-size: 1rem;
+}
+
+/* כפתור אישור - קטן, לבן עם מסגרת וטקסט ירוק */
+.worker-tasks-page .dark-modal-btn {
+    width: auto; /* ביטול הרוחב המלא (100%) כדי שיהיה קטן */
+    min-width: 120px; /* רוחב מינימלי חמוד שלא יתכווץ מדי */
+    background: white !important; /* רקע לבן */
+    color: #22c55e !important; /* טקסט ירוק תואם ל-V */
+    border: 0px !important; /* מסגרת ירוקה */
+    padding: 10px 24px; /* ריפוד קטן יותר */
+    border-radius: 12px !important; /* קימור מעודן */
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block; /* מאפשר לו להיות ממורכז וקטן */
+    margin-top: 30px;
+}
+
+/* אפקט הובר עדין - רקע ירוק בהיר בהיר כשעוברים עם העכבר */
+.worker-tasks-page .dark-modal-btn:hover {
+    background: rgba(34, 197, 94, 0.08) !important;
+    transform: translateY(-1px);
+}
+
+.worker-tasks-page .dark-modal-btn:active {
+    transform: translateY(1px);
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleUp {
+    from { opacity: 0; transform: scale(0.93) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
